@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Youtube API</title>
+</head>
+
+<body>
+  <style>
+    @media (max-width: 767.98px) {
+      .border-sm-start-none {
+        border-left: none !important;
+      }
+    }
+    h1{
+      text-align: center;
+    }
+  </style>
+
+  <h1>Data Present in the database</h1>
+  <section style="background-color: #eee;">
+    <div class="container py-5">
+      {% for cdata in content %}
+      <div class="row justify-content-center mb-3">
+        <div class="col-md-12 col-xl-10">
+          <div class="card shadow-0 border rounded-3">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                  <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                    <img src="{{cdata.thumbnails}}" class="w-100" />
+                    <a href="#!">
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h5>{{cdata.title}}</h5>
+                  <div class="d-flex flex-row">
+                    <div class="text-danger mb-1 me-2">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+
+                  </div>
+
+                  <p>
+                    {{cdata.description}}</p>
+                </div>
+                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                  <div class="d-flex flex-row align-items-center mb-1 ">
+                    <h5>{{cdata.channelTitle}}</h5>
+                  </div>
+                  <h6 class="text-success">{{cdata.publishedAt}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <!-- <table>
+        <tr style="width:100%">
+          <th>kind</th>
+          <th>channelTitle</th>
+          <th>videoId</th>
+          <th>title</th>
+          <th>publishedAt</th>
+          <th>channelId</th>
+          <th>thumbnails</th>
+          <th>description</th>
+        </tr>
+        {% for cdata in content %}
+        <tr>
+          <td>{{cdata.kind}}</td>
+          <td>{{cdata.channelTitle}}</td>
+          <td>{{cdata.videoId}}</td>
+          <td>{{cdata.title}}</td>
+          <td>{{cdata.publishedAt}}</td>
+          <td>{{cdata.channelId}}</td>
+          <td>{{cdata.thumbnails}}</td>
+          <td>{{cdata.description}}</td>
+        </tr>
+        {% endfor %}
+      </table> -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
