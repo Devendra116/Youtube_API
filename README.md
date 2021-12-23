@@ -17,6 +17,10 @@
 ```
 git clone https://github.com/Devendra116/Youtube_API.git
 ```
+#### Install requirement
+```
+pip install -r requirements.txt
+```
 #### Enter into youtube_api
 ``` 
 cd youtube_api
