@@ -14,6 +14,9 @@
 
 ## To Run Project :
 #### clone repo
+```
+git clone https://github.com/Devendra116/Youtube_API.git
+```
 #### Enter into youtube_api
 ``` 
 cd youtube_api
